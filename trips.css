@@ -1,0 +1,126 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#search-form {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #666;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.main {
+    padding: 20px;
+}
+
+.destination h2, .hotel h2 {
+    margin-bottom: 10px;
+}
+
+.destination-cards, .hotel-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destination-card, .hotel-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+}
+
+.destination-card img, .hotel-card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #006D77; /* Glassy Peacock Green color */
+}
+
+.destination-img:hover {
+    opacity: 0.7; /* Change opacity on hover */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Active effect */
+.destination-img.active {
+    opacity: 0.7; /* Change opacity when clicked */
+}
+.navbar {
+    background-color: #006D77; /* Glassy Peacock Green color */
+}
+
+.destination-img:hover {
+    opacity: 0.7 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.destination-img.active {
+    opacity: 0.7 !important;
+}
