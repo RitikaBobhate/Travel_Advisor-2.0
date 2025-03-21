@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    h1 {
+        color: rgb(0, 0, 0);
+    }
+    .card:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+        font-weight: bold; 
+        transition: 0.3s;
+    }
+    video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: visible;
+        margin: 0;
+      }
+      .navbar {
+        background-color: transparent !important;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 999; 
+    }
+    .navbar-brand {
+        color: white; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    }
+    .glassy-border-button {
+        background: transparent;
+        border: 2px solid rgba(227, 213, 213, 0.5);
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        padding: 3px 10px;
+        font-size: 16px;
+        font-weight: bold; 
+        transition: all 0.3s ease;
+    }
+    
+    .glassy-border-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 223, 117, 0.8);
+    }
+    .navbar {
+        background-color: rgba(115, 87, 87, 0.5); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+.navbar-nav .nav-item .nav-link {
+    color: #3a58d2 !important; 
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(207, 188, 67) !important; 
+}
+
+
+.navbar-nav .nav-item .nav-link.active {
+    color: rgb(102, 212, 210) !important; 
+}
+.image-container {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+}
+.background-image {
+    width: 100%; 
+    display: block;
+    height: 300px;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+.search-input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+
+.search-button:hover {
+    background-color: #0056b3; /
+}
+.video-container {
+    position: relative;
+}
+
+.dark-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.star {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.selected {
+    color: gold;
+}
+
+  </style>
+</head>
+<body>
+ 
+    <header>
+       
+    </header>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+             <a class="navbar-brand" href="C:\Users\Asus\Desktop\TRIP ADVISOR\Trips.html">
+            <img src="tripadvisor-high-resolution-logo.jpg" alt="Your Logo" style="width: 100px;">
+            <h1 style="display: inline-block; margin-left: 10px; "><u>TripAdvisor</u></h1>
+        </a>
+            <a class="navbar-brand" href="C:\Users\Asus\Desktop\TRIP ADVISOR\Trips.html"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="C:\Users\Asus\Desktop\TRIP ADVISOR\Trips.html"><button class="glassy-border-button">Home</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="C:\Users\Asus\Downloads\RESPONSIVE_TRAVEL_AGENCY_SITE_IN_HTML5_AND_JAVASCRIPT_WITH_SOURCE_CODE\tour\about.html"><button class="glassy-border-button">About Us</button></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="C:\Users\Asus\Desktop\TRIP ADVISOR\hotel.html.html"><button class="glassy-border-button">Hotels</button></a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="glassy-border-button">Travelling</button></a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="C:\Users\Asus\Desktop\TRIP ADVISOR\Registration.html"><button class="glassy-border-button">Registration</button></a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="image-container">
+        <div class="video-container">
+            <video autoplay loop muted playsinline class="dark-video">
+                <source src="lake_-_52849 (Original).mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="overlay-text">
+            
+            <h2 style="color: rgb(255, 255, 255);">Discover Your Next Destination!!!</h2>
+        </div>
+        <div class="search-bar">
+            <form>
+                <input type="text" class="search-input" placeholder="Search for hotels, restaurants, etc.">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </div>
+    
+
+
+ <!-- Top Destinations -->
+<div class="container my-4"  style="background-image: url(' https://png.pngtree.com/background/20221228/original/pngtree-pure-original-hand-painted-blue-sky-and-white-clouds-retro-old-picture-image_1993277.jpg');">
+    <h2 class="text-center mb-4"><u>Top Destinations</u></h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://www.isprava.com/wp-content/uploads/2019/10/trawell.com_.jpg" class="card-img-top" alt="Alibaug">
+                <div class="card-body">
+                    <h5 class="card-title">Alibaug</h5>
+                    <p class="card-text">Alibaug is a coastal town in Maharashtra, known for its beaches, historic forts, and fresh seafood.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://etimg.etb2bimg.com/thumb/msid-81345749,imgsize-91183,width-1200,height=765,overlay-ettravel/destination/states/maha-govt-to-develop-konkan-tourism-to-push-growth-of-blue-economy.jpg" class="card-img-top" alt="Konkan">
+                <div class="card-body">
+                    <h5 class="card-title">Konkan</h5>
+                    <p class="card-text">Konkan is a coastal region in Maharashtra, famous for its pristine beaches, lush greenery, and delicious cuisine.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://www.agoda.com/wp-content/uploads/2023/02/Goa-overview-things-to-do-in-goa.jpg" class="card-img-top" alt="Goa">
+                <div class="card-body">
+                    <h5 class="card-title">Goa</h5>
+                    <p class="card-text">Goa is a state in western India, renowned for its beautiful beaches, vibrant nightlife, and Portuguese heritage.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://onlinetourandtravel.com/wp-content/uploads/2020/09/Mumbai-blog-img.jpg" class="card-img-top" alt="Mumbai">
+                <div class="card-body">
+                    <h5 class="card-title">Mumbai</h5>
+                    <p class="card-text">Mumbai,  is the capital city of the Indian state of Maharashtra. It is known for its bustling streets, Bollywood film industry, and historic landmarks.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/4c/db/85/darjeeling-heights-homestay.jpg?w=700&h=-1&s=1" class="card-img-top" alt="Darjeeling">
+                <div class="card-body">
+                    <h5 class="card-title">Darjeeling</h5>
+                    <p class="card-text">Darjeeling is a town in the Indian state of West Bengal. It is known for its tea industry, Himalayan landscapes, and the Darjeeling Himalayan Railway, a UNESCO World Heritage Site.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://media.tacdn.com/media/attractions-content--1x-1/10/7e/09/64.jpg" class="card-img-top" alt="Udaipur">
+                <div class="card-body">
+                    <h5 class="card-title">Udaipur</h5>
+                    <p class="card-text">Udaipur, also known as the "City of Lakes," is a city in the Indian state of Rajasthan.Udaipur, also known as the "City of Sunrise", is a city in the state of Rajasthan, India. It is famous for its historic palaces, scenic lakes and  cultural heritage .</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://www.authenticindiatours.com/app/uploads/2022/05/10-reasons-to-visit-Kerala-Kumarakom-Back-Waters-Boat-House-1400x550-c-default.jpg" class="card-img-top" alt="Kerala">
+                <div class="card-body">
+                    <h5 class="card-title">Kerala</h5>
+                    <p class="card-text">Kerala is a state on the southwestern coast of India, known for its palm-lined beaches, backwaters, and tropical forests. Kerala is well-known for its mesmerizing backwaters, ecotourism initiatives, scenic beauty, amazing beaches, and mouthwatering cuisine."</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://static.toiimg.com/photo/107164723.cms" class="card-img-top" alt="Jaipur">
+                <div class="card-body">
+                    <h5 class="card-title">Jaipur</h5>
+                    <p class="card-text">Jaipur is the capital city of Rajasthan. It is known as the "Pink City" due to the distinctive color of its buildings. Jaipur is famous for its historic forts, palaces, and vibrant culture.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://content.r9cdn.net/rimg/dimg/7d/10/d91b782d-city-53277-17313d53696.jpg?width=1366&height=768&xhint=2312&yhint=1762&crop=true" class="card-img-top" alt="Leh Ladakh">
+                <div class="card-body">
+                    <h5 class="card-title">Leh Ladakh</h5>
+                    <p class="card-text">Leh Ladakh is a region in the Indian state of Jammu and Kashmir. It is majorly  known for its breathtaking landscapes, Buddhist monasteries, and adventure activities like trekking and motorbiking etc.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/07/18131039/shimla-feature-compressed.jpg" class="card-img-top" alt="Shimla">
+                <div class="card-body">
+                    <h5 class="card-title">Shimla</h5>
+                    <p class="card-text">Shimla is the capital and the largest city of the Indian state of Himachal Pradesh. It is known for its colonial architecture, scenic beauty, and also as a popular hill station destination.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://foodandtravel.com/imager/hours/219609/Ministry-of-Tourism-Govt-of-India-595161_Taj-Mahal-Uttar-Pradesh-Aerial_821631bb23140209ea99c8f810f75634.jpg" class="card-img-top" alt="Agra">
+                <div class="card-body">
+                    <h5 class="card-title">Agra</h5>
+                    <p class="card-text">Agra is a city in the  Indian state of Uttar Pradesh, famous for the iconic Taj Mahal, a UNESCO World Heritage Site. It also consist of significant Mughal-era landmarks .</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6xBY-7NKcatFm3sJpbw493sebTgJZ2nicEg&usqp=CAU" class="card-img-top" alt="Kashmir">
+                <div class="card-body">
+                    <h5 class="card-title">Kashmir</h5>
+                    <p class="card-text">Kashmir is a region in the northern part of India, known for its picturesque landscapes, serene lakes, and snow-capped mountains. It is often referred to as "Paradise on Earth because of it's scenic beauty"</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        
+
+       
+    </div>
+</div>
+
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Reviews</h2>
+    <div id="reviewsContainer"></div>
+    <form id="reviewForm">
+        <div class="form-group">
+            <label for="reviewName">Name:</label>
+            <input type="text" class="form-control" id="reviewName" required>
+            <div class="rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="reviewRating" name="reviewRating" value="0">
+        </div>
+        <div class="form-group">
+            <label for="reviewContent">Review:</label>
+            <textarea class="form-control" id="reviewContent" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
+</div>
+
+<footer id="colorlib-footer" role="contentinfo">
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-3 colorlib-widget">
+                <h4>Tour Agency</h4>
+                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                <p>
+                    <ul class="colorlib-social-icons">
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-md-2 colorlib-widget">
+                <h4>Book Now</h4>
+                <p>
+                    <ul class="colorlib-footer-links">
+                        <li><a href="#">Flight</a></li>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Tour</a></li>
+                        <li><a href="#">Car Rent</a></li>
+                        <li><a href="#">Beach &amp; Resorts</a></li>
+                        <li><a href="#">Cruises</a></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-md-2 colorlib-widget">
+                <h4>Top Deals</h4>
+                <p>
+                    <ul class="colorlib-footer-links">
+                        <li><a href="#">Edina Hotel</a></li>
+                        <li><a href="#">Quality Suites</a></li>
+                        <li><a href="#">The Hotel Zephyr</a></li>
+                        <li><a href="#">Da Vinci Villa</a></li>
+                        <li><a href="#">Hotel Epikk</a></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-md-2">
+                <h4>Blog Post</h4>
+                <ul class="colorlib-footer-links">
+                    <li><a href="#">The Ultimate Packing List For Female Travelers</a></li>
+                    <li><a href="#">How These 5 People Found The Path to Their Dream Trip</a></li>
+                    <li><a href="#">A Definitive Guide to the Best Dining and Drinking Venues in the City</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1">
+                <h4>Contact Information</h4>
+                <ul class="colorlib-footer-links">
+                    <li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
+                    <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                    <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+                    <li><a href="#">yoursite.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is Brought To You By <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Code-Projects.Org</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
+                    <span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+
+
+
+   
+    <footer class="bg-dark text-white mt-4 py-3">
+        <div class="container text-center">
+            &copy; 2024 TripAdvisor
+        </div>
+    </footer>
+
+  
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/376fefe5-3f95-42b6-a80a-17d1795ba6b3/webchat/config.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function () {
+            let images = document.querySelectorAll('.destination-img');
+            images.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    this.classList.toggle('active'); 
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const destinationContainer = document.getElementById('destinationContainer');
+    
+            searchInput.addEventListener('input', function () {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const destinationCards = destinationContainer.querySelectorAll('.card');
+    
+                destinationCards.forEach(function (card) {
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const text = card.querySelector('.card-text').textContent.toLowerCase();
+                    const match = title.includes(searchTerm) || text.includes(searchTerm);
+                    card.style.display = match ? 'block' : 'none';
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+
+            searchInput.addEventListener('input', function () {
+                const searchText = searchInput.value.toLowerCase();
+                searchResults.innerHTML = ''; // Clear previous results
+
+                const data = ['Hotel 1', 'Hotel 2', 'Restaurant 1', 'Restaurant 2']; 
+
+                data.forEach(item => {
+                    if (item.toLowerCase().includes(searchText)) {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        searchResults.appendChild(li);
+                    }
+                });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewForm = document.getElementById('reviewForm');
+            const reviewsContainer = document.getElementById('reviewsContainer');
+    
+            reviewForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+    
+               
+                const name = document.getElementById('reviewName').value;
+                const content = document.getElementById('reviewContent').value;
+    
+               
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('card', 'mb-2');
+                reviewElement.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title">${name}</h5>
+                        <p class="card-text">${content}</p>
+                    </div>
+                `;
+    
+              
+                reviewsContainer.appendChild(reviewElement);
+    
+                reviewForm.reset();
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewForm = document.getElementById('reviewForm');
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            const ratingStars = document.querySelectorAll('.star');
+        
+            ratingStars.forEach(function (star) {
+                star.addEventListener('click', function () {
+                    const value = parseInt(this.getAttribute('data-value'));
+                    document.getElementById('reviewRating').value = value;
+        
+                    ratingStars.forEach(function (s) {
+                        if (parseInt(s.getAttribute('data-value')) <= value) {
+                            s.classList.add('selected');
+                        } else {
+                            s.classList.remove('selected');
+                        }
+                    });
+                });
+            });
+        
+            reviewForm.addEventListener('submit', function (event) {
+                event.preventDefault(); 
+        
+               
+                const name = document.getElementById('reviewName').value;
+                const content = document.getElementById('reviewContent').value;
+                const rating = parseInt(document.getElementById('reviewRating').value);
+        
+               
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('card', 'mb-2');
+                reviewElement.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title">${name}</h5>
+                        <div class="rating">${'&#9733;'.repeat(rating)}</div>
+                        <p class="card-text">${content}</p>
+                    </div>
+                `;
+        
+            
+                reviewsContainer.appendChild(reviewElement);
+        
+              
+                reviewForm.reset();
+        
+              
+                ratingStars.forEach(function (s) {
+                    s.classList.remove('selected');
+                });
+            });
+        });
+        
+        
+
+
+    </script>
+</body>
+</html>
+
